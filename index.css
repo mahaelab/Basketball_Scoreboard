@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "clock_font";
+    src: url(clock_font.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: "clock_font", sans-serif;
+    background-color: #212440;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.guest, .home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+}
+
+h2, h3 {
+    color: aliceblue;
+    margin: 0;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+h2 {
+    color: #e33664;
+    font-size: 120px;
+    background-color: black;
+    line-height: 1;
+    padding-top: 8px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
+
+.btn_row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    width: 90px;
+    height: 90px;
+    font-size: 33px;
+    color: #aab0f0;
+    background-color: #212440;
+    border: 2px solid #aab0f0;
+    border-radius: 15%;
+    font-family: inherit;
+}
+
+.reset {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.reset_btn {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+    color: #aab0f0;
+    font-size: 37px;
+    background-color: transparent;
+    border: 2px solid #aab0f0;
+    border-radius: 15%;
+    padding: 22px 17px 17px 22px;
+}
+
+.btn, .reset_btn {
+    --lift: 10px;
+    cursor: pointer;
+    box-shadow:
+        inset 1px 1px 2px rgba(170, 176, 240, 0.35),
+        0 var(--lift) 0 #0f1124;
+    transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.btn:hover, .reset_btn:hover {
+    background-color: #2d3160;
+}
+
+.btn:active, .reset_btn:active {
+    transform: translateY(var(--lift));
+    box-shadow: inset 1px 1px 2px rgba(170, 176, 240, 0.35);
+}
